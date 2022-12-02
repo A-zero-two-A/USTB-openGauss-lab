@@ -2,6 +2,7 @@
 
 ## List
 
+必做
 - [x] 任务1  安装配置VMware Workstation虚拟化软件
 - [x] 任务2  安装CentOS 7.6 操作系统
 - [x] 任务3  安装openGauss DBMS
@@ -15,6 +16,8 @@
 - [ ] 任务20 openGauss DML语句测试
 - [ ] 任务21 openGauss SELECT语句
 - [ ] 任务22 使用JDBC访问openGauss数据库
+
+选做
 - [ ] 任务28 基于Visio的openGauss数据库设计
 - [ ] 任务29 基于PowerDesigner的openGauss数据库设计
 
@@ -176,6 +179,7 @@
 
 ### 心得体会
 
+---
 
 ## mission 28
 
