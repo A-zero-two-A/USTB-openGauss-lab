@@ -14,12 +14,15 @@
 - [x] 任务15 openGauss逻辑结构：视图管理
 - [x] 任务17 openGauss逻辑结构：触发器管理
 - [x] 任务20 openGauss DML语句测试
-- [ ] 任务21 openGauss SELECT语句
-- [ ] 任务22 使用JDBC访问openGauss数据库
-
-选做
+- [x] 任务21 openGauss SELECT语句
+- [x] 任务22 使用JDBC访问openGauss数据库
 - [ ] 任务28 基于Visio的openGauss数据库设计
 - [ ] 任务29 基于PowerDesigner的openGauss数据库设计
+
+选做（2.5*2）
+- [ ] SQL引擎实现
+- [ ] 存储引擎实现（要求支持事务并发）
+
 
 ---
 
@@ -169,30 +172,32 @@
 通过本次实验我掌握了openGauss中DML语句的用法，包括INSERT语句、DELETE语句和UPDATE语句。通过本次实验，我了解到了INSERT语句可以一次插入一行，为插入行提供部分列的值，或者一次插入多行，为一行的所有列提供值，同时了解到了有些违反主键约束的语句无法正常进行插入。学会了如何使用DELETE配合WHERE子句进行数据删除。学会了使用UPDATE语句进行数据的修改更新。通过本次实验我学会了这三种语句的用法用途。
 
 
-<!-- todo -->
+
 
 ## mission 21
 
 ### 实验内容
 
-本次实验主要掌握SQL中SELECT语句的用法。
+本次实验主要掌握SQL中SELECT语句的用法。首先学习掌握SQL中一个完整的SELECT语句的组成部分以及执行顺序，其次学习SQL语句中注释的写法。完成上述预备知识学习后，进行单表查询和多表查询的练习。首先进行单表查询，分别使用SELECT子句、加入WHERE子句中谓词、ORDER BY子句、GRUOP BY子句和HAVING子句与SQL函数进行单表查询，随后使用不同关系代数算符进行多表查询，最后清理环境完成实验。
 
 ### 实验记录
 
-
-
 ### 心得体会
 
+通过本次实验我掌握了SQL中SELECT语句的用法。了解到了一个完整的SQL语句包括SELECT columnlist、FROM tablelist、WHERE condition、GROUP BY columnlist、HAVING condition、ORDER BY columnlist六个部分，并通过实验对这六个部分的功能和执行顺序进行了认识。同时学习了SQL中注释的写法，最后学习并练习了单表查询与多表查询的操作与方法，在学习的过程中还巩固了理论课中关系代数的相关知识。
 
 ## mission 22
 
 ### 实验内容
 
+本次实验主要掌握使用JDBC编程访问数据库。首先进行准备工作，使用omm用户打开shell并创建对应的数据库用户、表空间和数据库。随后下载安装Java SE 8开发环境并安装配置，随后下载IDE eclipse并安装，最后下载安装openGauss的JDBC驱动包，完成后使用eclipse新建并编写一个JDBC测试程序并对openGauss的JDBC进行测试使用，最后清理环境结束实验。
+
 ### 实验记录
 
 ### 心得体会
 
----
+本次实验收获很多。我了解到了JDBC的概念与使用方法，第一次学会了在Java程序中通过JDBC驱动对数据库进行访问以及数据的增删改查，在配置开发环境的过程中我还了解并练习了Java SDK的安装与环境变量的配置，对在Linux系统下开发环境的配置流程有了掌握，收获颇丰。
+
 
 ## mission 28
 
