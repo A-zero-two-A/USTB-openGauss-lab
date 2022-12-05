@@ -200,17 +200,22 @@
 
 
 ## mission 28
-<!-- todo -->
+
 ### 实验内容
+
+首先下载安装Office 2016和Visio 2016软件，随后使用Visio 2016根据需求完成E-R图的绘制。本实验选择 “选课系统” 进行设计。首先绘制Teacher实体集，其属性分别为ID、name、department、grade、birthday、gender。随后绘制学生实体集，其属性分别为ID、name、major、grade、birthday、gender。绘制course实体集，其属性为ID、name、score、type、time，其中time由date、section组成，date由week和day组成。最后绘制关系instruct、take和teach。完成将其转化为SQL脚本。
 
 ### 实验记录
 
 ### 心得体会
 
+通过本次实验我了解到了E-R图绘制软件Visio 2016的基本使用方法，同时通过对用例的设计我掌握了E-R图的陈氏(P.P.S.Chen)画法，学会了将E-R图手动转化为关系模式且能将关系模式转化为可以在openGauss中部署，包括索引设计、物理存储设计的SQL脚本。
+
 ### ER模型设计
 
 ![ER Diagram](/img/er1.png)
 
+选课系统中主要的实体集有三种，分别为教师Teacher、学生Student和课程Course。教师的属性主要有教工号ID、姓名name、学院department、生日birthday和性别gender。学生的属性主要有学号ID、姓名name、专业major、年级grade、生日birthday和性别gender。课程的属性主要有课程号ID、课程名name、学分score、类型（必修/选修）type、时间time，其中时间time是复合属性，由周号week和星期day组成date日期，并与节次section共同组成。关系主要为部分教师指导全体学生、部分学生选修部分课程、部分老师开设全体课程。
 
 ## mission 29
 
