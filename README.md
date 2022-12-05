@@ -16,8 +16,8 @@
 - [x] 任务20 openGauss DML语句测试
 - [x] 任务21 openGauss SELECT语句
 - [x] 任务22 使用JDBC访问openGauss数据库
-- [ ] 任务28 基于Visio的openGauss数据库设计
-- [ ] 任务29 基于PowerDesigner的openGauss数据库设计
+- [x] 任务28 基于Visio的openGauss数据库设计
+- [x] 任务29 基于PowerDesigner的openGauss数据库设计
 
 选做（2.5*2）
 - [ ] SQL引擎实现
@@ -215,14 +215,22 @@
 
 ![ER Diagram](/img/er1.png)
 
-选课系统中主要的实体集有三种，分别为教师Teacher、学生Student和课程Course。教师的属性主要有教工号ID、姓名name、学院department、生日birthday和性别gender。学生的属性主要有学号ID、姓名name、专业major、年级grade、生日birthday和性别gender。课程的属性主要有课程号ID、课程名name、学分score、类型（必修/选修）type、时间time，其中时间time是复合属性，由周号week和星期day组成date日期，并与节次section共同组成。关系主要为部分教师指导全体学生、部分学生选修部分课程、部分老师开设全体课程。
+选课系统中主要的实体集有三种，分别为教师Teacher、学生Student和课程Course。教师的属性主要有教工号ID（主键）、姓名name、学院department、生日birthday和性别gender。学生的属性主要有学号ID、姓名name、专业major、年级grade、生日birthday和性别gender。课程的属性主要有课程号ID（主键）、课程名name、学分score、类型（必修/选修）type、时间time，其中时间time是复合属性，由周号week和星期day组成date日期，并与节次section共同组成，其中ID与time组成主键。关系主要为部分教师指导Instruct全体学生、部分学生选修Take部分课程、部分老师开设Teach全体课程。共6张表。
 
 ## mission 29
 
 ### 实验内容
 
+本次实验主要使用PowerDesigner工具进行ER图的设计及SQL脚本的生成。首先下载PowerDesigner工具并安装，随后新建模型，在模型中创建三个实体集Teacher、Student和Course。分别设置这三个实体集的属性，Teacher属性为ID（主键）、name、department、grade、birthday、gender，Student属性分别为ID（主键）、name、major、grade、birthday、gender，Course属性为ID（主键）、name、score、type、time（主键），完成即可看到ER图中的三个实体集，使用关系工具设置其关系，Teacher对Student、Course均为一对多，学生与课程为多对多，完成保存即可。
+
 ### 实验记录
 
 ### 心得体会
 
+通过本次实验我掌握了计算机辅助软件工程工具（CASE工具）PowerDesigner的用法，学会并使用了PowerDesigner设计和部署openGauss数据库应用。本次选择设计了一个选课系统的数据库，运用到了PowerDesigner工具的创建模型、修改模型、创建实体、修改实体、创建关系、修改关系等功能，了解使用CASE的大致流程与便捷性，收获很大。
+
 ### ER模型设计
+
+![ER Diagram](/img/er2.png)
+
+选课系统中主要的实体集有三种，分别为教师Teacher、学生Student和课程Course。教师的属性主要有教工号ID（主键）、姓名name、学院department、生日birthday和性别gender。学生的属性主要有学号ID（主键）、姓名name、专业major、年级grade、生日birthday和性别gender。课程的属性主要有课程号ID、课程名name、学分score、类型（必修/选修）type、时间time，其中ID与time组成主键。关系主要为部分教师指导Instruct全体学生、部分学生选修Take部分课程、部分老师开设Teach全体课程。共6张表。
